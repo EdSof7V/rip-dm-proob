@@ -1,9 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import Link from "next/link";
-import Image from "next/image";
-import Breadcrumb from "@/components/Breadcrumbs/Breadcrumb";
-import DefaultLayout from "@/components/Layouts/DefaultLayout";
 import { useRouter } from "next/navigation";
 import { signIn } from "next-auth/react";
 

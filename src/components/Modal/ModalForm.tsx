@@ -61,21 +61,12 @@ const ModalForm: React.FC<ModalFormProps> = ({ title = "Custom Modal Title", but
                                 <svg className="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
                                     <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
                                 </svg>
-                                <span className="sr-only">Close modal</span>
+                                <span className="sr-only">cerrar modal</span>
                             </button>
                         </div>
 
                         <div className="p-4 md:p-5 space-y-4">
-                            {children || (
-                                <>
-                                    <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                                        This is the custom modal content. You can modify this text as needed.
-                                    </p>
-                                    <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                                        Feel free to replace this with any content you want.
-                                    </p>
-                                </>
-                            )}
+                            {children}
                         </div>
 
                     </div>
