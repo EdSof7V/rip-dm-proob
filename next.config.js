@@ -8,14 +8,6 @@ const nextConfig = {
         NEXT_PUBLIC_API_URL:"https://my-app-430707315045.southamerica-west1.run.app",
         NEXTAUTH_SECRET:"d35e00b42eb505d1b7ee257b9d2cce38",
     },
-    webpack: (config, { isServer }) => {
-        config.module.rules.push({
-          test: /\.node$/,
-          use: "null-loader",
-        });
-    
-        return config;
-      },
 };
 
 export default nextConfig;
