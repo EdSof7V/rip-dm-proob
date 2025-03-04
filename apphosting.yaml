@@ -6,38 +6,4 @@ runConfig:
   memoryMiB: 512
   concurrency: 1
 
-# Variables de entorno
-#env:
-  # Variable pública
-  #- variable: NEXT_PUBLIC_API_URL
-  #  value: "https://my-app-430707315077.southamerica-west1.run.app"
-  #  availability:
-  #    - BUILD
-  #    - RUNTIME
 
-  # Variables seguras desde Secret Manager
-  #- variable: AZURE_AD_CLIENT_ID
-  #  secret: AZURE_AD_CLIENT_ID
-  #  availability:
-  #    - RUNTIME
-
-  #- variable: AZURE_AD_CLIENT_SECRET
-  #  secret: AZURE_AD_CLIENT_SECRET
-  #  availability:
-  #    - RUNTIME
-
-  #- variable: AZURE_AD_TENANT_ID
-  #  secret: AZURE_AD_TENANT_ID
-  #  availability:
-  #    - RUNTIME
-
-  #- variable: NEXTAUTH_SECRET
-  #  secret: NEXTAUTH_SECRET
-  #  availability:
-  #    - RUNTIME
-
-  #- variable: STORAGE_BUCKET
-  #  value: mybucket.firebasestorage.app
-  #  availability:
-  #    - BUILD
-  #    - RUNTIME
