@@ -1,0 +1,38 @@
+# Configuración mínima para Cloud Run
+runConfig:
+  minInstances: 0
+  maxInstances: 1
+  cpu: 1
+  memoryMiB: 512
+  concurrency: 1
+
+# Variables de entorno
+env:
+  # Variable pública
+  - variable: NEXT_PUBLIC_API_URL
+    value: "https://my-app-430707315045.southamerica-west1.run.app"
+    availability:
+      - BUILD
+      - RUNTIME
+
+  # Variables seguras desde Secret Manager
+  - variable: AZURE_AD_CLIENT_ID
+    secretSource:
+      secretName: projects/PROJECT_ID/secrets/AZURE_AD_CLIENT_ID/versions/latest
+    availability: RUNTIME
+
+  - variable: AZURE_AD_CLIENT_SECRET
+    secretSource:
+      secretName: projects/PROJECT_ID/secrets/AZURE_AD_CLIENT_SECRET/versions/latest
+    availability: RUNTIME
+
+  - variable: AZURE_AD_TENANT_ID
+    secretSource:
+      secretName: projects/PROJECT_ID/secrets/AZURE_AD_TENANT_ID/versions/latest
+    availability: RUNTIME
+
+  - variable: NEXTAUTH_SECRET
+    secretSource:
+      secretName: projects/PROJECT_ID/secrets/NEXTAUTH_SECRET/versions/latest
+    availability: RUNTIME
+
