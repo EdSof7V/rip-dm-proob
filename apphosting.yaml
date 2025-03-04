@@ -18,25 +18,25 @@ env:
   # Variables seguras desde Secret Manager
   - variable: AZURE_AD_CLIENT_ID
     secretSource:
-      secretName: projects/PROJECT_ID/secrets/AZURE_AD_CLIENT_ID/versions/latest
+      secretName: projects/dashboard-manager-rip/secrets/AZURE_AD_CLIENT_ID/versions/latest
     availability:
       - RUNTIME
 
   - variable: AZURE_AD_CLIENT_SECRET
     secretSource:
-      secretName: projects/PROJECT_ID/secrets/AZURE_AD_CLIENT_SECRET/versions/latest
+      secretName: projects/dashboard-manager-rip/secrets/AZURE_AD_CLIENT_SECRET/versions/latest
     availability:
       - RUNTIME
 
   - variable: AZURE_AD_TENANT_ID
     secretSource:
-      secretName: projects/PROJECT_ID/secrets/AZURE_AD_TENANT_ID/versions/latest
+      secretName: projects/dashboard-manager-rip/secrets/AZURE_AD_TENANT_ID/versions/latest
     availability:
       - RUNTIME
 
   - variable: NEXTAUTH_SECRET
     secretSource:
-      secretName: projects/PROJECT_ID/secrets/NEXTAUTH_SECRET/versions/latest
+      secretName: projects/dashboard-manager-rip/secrets/NEXTAUTH_SECRET/versions/latest
     availability:
       - RUNTIME
 
