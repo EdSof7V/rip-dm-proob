@@ -17,26 +17,22 @@ env:
 
   # Variables seguras desde Secret Manager
   - variable: AZURE_AD_CLIENT_ID
-    secretSource:
-      secretName: projects/dashboard-manager-rip/secrets/AZURE_AD_CLIENT_ID/versions/latest
+    secret: AZURE_AD_CLIENT_ID
     availability:
       - RUNTIME
 
   - variable: AZURE_AD_CLIENT_SECRET
-    secretSource:
-      secretName: projects/dashboard-manager-rip/secrets/AZURE_AD_CLIENT_SECRET/versions/latest
+    secret: AZURE_AD_CLIENT_SECRET
     availability:
       - RUNTIME
 
   - variable: AZURE_AD_TENANT_ID
-    secretSource:
-      secretName: projects/dashboard-manager-rip/secrets/AZURE_AD_TENANT_ID/versions/latest
+    secret: AZURE_AD_TENANT_ID
     availability:
       - RUNTIME
 
   - variable: NEXTAUTH_SECRET
-    secretSource:
-      secretName: projects/dashboard-manager-rip/secrets/NEXTAUTH_SECRET/versions/latest
+    secret: NEXTAUTH_SECRET
     availability:
       - RUNTIME
 
@@ -49,14 +45,14 @@ env:
   - variable: API_KEY
     secret: myApiKeySecret
 
-    # Same as API_KEY above but with a pinned version.
+  # Mismo API_KEY pero con una versión específica del secreto
   - variable: PINNED_API_KEY
     secret: myApiKeySecret@5
 
-    # Same as API_KEY above but with the long form secret reference as defined by Cloud Secret Manager.
+  # Referencia con el ID completo del secreto en Google Cloud Secret Manager
   - variable: VERBOSE_API_KEY
-    secret: projects/test-project/secrets/secretID
+    secret: secretID
 
-    # Same as API_KEY above but with the long form secret reference with pinned version.
+  # Referencia con versión específica del secreto
   - variable: PINNED_VERBOSE_API_KEY
-    secret: projects/test-project/secrets/secretID/versions/5
+    secret: secretID@5
