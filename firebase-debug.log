@@ -1,0 +1,41 @@
+[debug] [2025-03-04T14:57:47.744Z] ----------------------------------------------------------------------
+[debug] [2025-03-04T14:57:47.745Z] Command:       C:\nvm4w\nodejs\node.exe C:\nvm4w\nodejs\node_modules\firebase-tools\lib\bin\firebase.js projects:list
+[debug] [2025-03-04T14:57:47.746Z] CLI Version:   13.31.2
+[debug] [2025-03-04T14:57:47.746Z] Platform:      win32
+[debug] [2025-03-04T14:57:47.746Z] Node Version:  v20.18.3
+[debug] [2025-03-04T14:57:47.746Z] Time:          Tue Mar 04 2025 09:57:47 GMT-0500 (hora estándar de Perú)
+[debug] [2025-03-04T14:57:47.746Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-03-04T14:57:47.760Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-03-04T14:57:47.760Z] > authorizing via signed-in user (derek@jarvisdigital.net)
+[debug] [2025-03-04T14:57:47.763Z] Checked if tokens are valid: false, expires at: 1740119473246
+[debug] [2025-03-04T14:57:47.763Z] Checked if tokens are valid: false, expires at: 1740119473246
+[debug] [2025-03-04T14:57:47.763Z] > refreshing access token with scopes: []
+[debug] [2025-03-04T14:57:47.765Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-03-04T14:57:47.765Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-03-04T14:57:48.177Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2025-03-04T14:57:48.177Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[error] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[error] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2025-03-04T14:57:48.178Z] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2025-03-04T14:57:48.179Z] FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+    at invalidCredentialError (C:\Users\EDGAR\AppData\Local\nvm\v20.18.3\node_modules\firebase-tools\lib\auth.js:147:12)
+    at refreshTokens (C:\Users\EDGAR\AppData\Local\nvm\v20.18.3\node_modules\firebase-tools\lib\auth.js:539:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getAccessToken (C:\Users\EDGAR\AppData\Local\nvm\v20.18.3\node_modules\firebase-tools\lib\apiv2.js:42:18)
+    at async Client.addAuthHeader (C:\Users\EDGAR\AppData\Local\nvm\v20.18.3\node_modules\firebase-tools\lib\apiv2.js:169:21)
+    at async Client.request (C:\Users\EDGAR\AppData\Local\nvm\v20.18.3\node_modules\firebase-tools\lib\apiv2.js:120:34)
+    at async getProjectPage (C:\Users\EDGAR\AppData\Local\nvm\v20.18.3\node_modules\firebase-tools\lib\management\projects.js:265:17)
+    at async getFirebaseProjectPage (C:\Users\EDGAR\AppData\Local\nvm\v20.18.3\node_modules\firebase-tools\lib\management\projects.js:282:23)
+    at async listFirebaseProjects (C:\Users\EDGAR\AppData\Local\nvm\v20.18.3\node_modules\firebase-tools\lib\management\projects.js:313:29)
+    at async Command.actionFn (C:\Users\EDGAR\AppData\Local\nvm\v20.18.3\node_modules\firebase-tools\lib\commands\projects-list.js:51:20)
+[error] 
+[error] Error: Failed to list Firebase projects. See firebase-debug.log for more info.
