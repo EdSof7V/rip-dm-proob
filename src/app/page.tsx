@@ -1,6 +1,4 @@
-import ECommerce from "@/components/Dashboard/ProyectoPresupuesto";
 import { Metadata } from "next";
-import DefaultLayout from "@/components/Layouts/DefaultLayout";
 import SignIn from "./signin/page";
 
 export const metadata: Metadata = {
