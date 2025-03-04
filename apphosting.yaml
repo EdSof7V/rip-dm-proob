@@ -7,13 +7,13 @@ runConfig:
   concurrency: 1
 
 # Variables de entorno
-env:
+#env:
   # Variable pública
-  - variable: NEXT_PUBLIC_API_URL
-    value: "https://my-app-430707315077.southamerica-west1.run.app"
-    availability:
-      - BUILD
-      - RUNTIME
+  #- variable: NEXT_PUBLIC_API_URL
+  #  value: "https://my-app-430707315077.southamerica-west1.run.app"
+  #  availability:
+  #    - BUILD
+  #    - RUNTIME
 
   # Variables seguras desde Secret Manager
   #- variable: AZURE_AD_CLIENT_ID
@@ -41,18 +41,3 @@ env:
   #  availability:
   #    - BUILD
   #    - RUNTIME
-
-  - variable: API_KEY
-    secret: myApiKeySecret
-
-  # Mismo API_KEY pero con una versión específica del secreto
-  - variable: PINNED_API_KEY
-    secret: myApiKeySecret@5
-
-  # Referencia con el ID completo del secreto en Google Cloud Secret Manager
-  - variable: VERBOSE_API_KEY
-    secret: secretID
-
-  # Referencia con versión específica del secreto
-  - variable: PINNED_VERBOSE_API_KEY
-    secret: secretID@5
